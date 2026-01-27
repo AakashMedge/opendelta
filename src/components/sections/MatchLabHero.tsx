@@ -1,0 +1,118 @@
+"use client";
+
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+
+const MatchLabHero = () => {
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const scrollToCollaborate = () => {
+        const element = document.getElementById('collaborate');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const heroTranslate = scrollY * -0.3;
+    const imageTranslate = scrollY * -0.15;
+
+    return (
+        <div className="bg-[#F3F3F3] selection:bg-black selection:text-white relative overflow-hidden">
+            {/* 1. Hero Content Section */}
+            <section
+                className="relative px-6 md:px-12 pt-[150px] pb-12 z-20 bg-[#F3F3F3]"
+                style={{ transform: `translateY(${heroTranslate}px)` }}
+            >
+                <div className="max-w-[1440px] mx-auto">
+                    <div className="max-w-4xl">
+                        <div className="text-[10px] md:text-[12px] font-black tracking-[0.2em] text-[#333] mb-8 uppercase">
+                            DYNAMIC MATCHING
+                        </div>
+                        <h1 className="text-[48px] md:text-[72px] lg:text-[88px] font-medium leading-none tracking-tight text-[#1A1A1A] mb-12 uppercase">
+                            ONE SOCIETAL PROBLEM<br />
+                            AT A TIME
+                        </h1>
+
+                        <div className="max-w-3xl space-y-8 text-[#555]">
+                            <p className="text-[16px] md:text-[18px] lg:text-[20px] leading-[1.6] text-[#333] font-medium">
+                                Open Delta&apos;s platform redefines problem-solving by dynamically matching societal challenges to solution architects based on expertise and relevance.
+                            </p>
+                            <p className="text-[15px] md:text-[17px] leading-[1.6]">
+                                The process begins with a detailed analysis of the problems listed on the platform, categorizing them by sector, complexity, urgency, and potential impact.
+                            </p>
+                            <p className="text-[15px] md:text-[17px] leading-[1.6]">
+                                Solution architects—comprising researchers, startups, and institutions—are then identified based on their track record, domain expertise, and innovative capabilities. This matching process is further enhanced by the involvement of our teams, who bring their strategic acumen to ensure solutions are viable for scaling and long-term implementation.
+                            </p>
+                            <p className="text-[15px] md:text-[17px] leading-[1.6]">
+                                Our expertise is crucial in this dynamic matching process, as it provides a lens of practicality and scalability that bridges the gap between ideation and execution. We help identify high-potential solutions while mitigating risks associated with innovation. This ensures that the right problems are paired with the right minds, creating an ecosystem where resources are optimized for maximum societal benefit.
+                            </p>
+                            <p className="text-[15px] md:text-[17px] leading-[1.6]">
+                                Ultimately, this approach not only accelerates problem-solving but also enhances the quality of solutions by aligning them with both societal needs and market dynamics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 2. The Image Section */}
+            <div
+                className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12"
+                style={{
+                    marginTop: '-150px',
+                    transform: `translateY(${imageTranslate}px)`
+                }}
+            >
+                <div className="max-w-4xl">
+                    <div className="relative w-full aspect-square md:aspect-video lg:aspect-square overflow-hidden bg-white shadow-sm">
+                        <Image
+                            src="/matchlab-hands.png"
+                            alt="Dynamic Matching Illustration"
+                            fill
+                            className="object-contain p-4 md:p-8"
+                            priority
+                        />
+                    </div>
+
+                    {/* Bottom Prompt Bar */}
+                    <div className="mt-6 flex justify-between items-end border-b border-black/5 pb-4">
+                        <div className="flex gap-4">
+                            <SocialIcon type="instagram" />
+                            <SocialIcon type="twitter" />
+                        </div>
+                        <button
+                            onClick={scrollToCollaborate}
+                            className="flex items-center gap-3 group"
+                        >
+                            <span className="text-[10px] font-black tracking-[0.2em] text-[#1A1A1A]">SCROLL TO EXPLORE</span>
+                            <div className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all">
+                                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="2.5">
+                                    <path d="M7 7l10 10M17 7v10H7" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const SocialIcon = ({ type }: { type: 'instagram' | 'twitter' }) => (
+    <div className="w-10 h-10 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-pointer">
+        {type === 'instagram' ? (
+            <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        ) : (
+            <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none" strokeWidth="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+        )}
+    </div>
+);
+
+export default MatchLabHero;
