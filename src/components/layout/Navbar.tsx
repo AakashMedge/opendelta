@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const menuItems = [
-    { name: 'HOME', href: '/home' },
+    { name: 'HOME', href: '/' },
     { name: 'THINKSPACE', href: '/thinkspace' },
     { name: 'OPEN THOUGHT PRJ', href: '/open-thought-prj' },
     { name: 'FUNDING ACCESS', href: '/funding-access' },
@@ -78,19 +78,22 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu - Matches Image 2 reference */}
-                <div className="hidden lg:flex items-center gap-2 xl:gap-3">
-                    {menuItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className={`whitespace-nowrap px-4 xl:px-5 py-2 text-[10px] xl:text-[11px] font-bold tracking-wider transition-all duration-300 rounded-full border border-transparent ${pathname === item.href
-                                ? 'bg-[#1A1A1A] text-white ring-1 ring-white/10 shadow-lg'
-                                : 'bg-[#222] text-[#eee] hover:bg-black hover:text-white hover:scale-105'
-                                }`}
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
+                <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+                    {menuItems.map((item) => {
+                        const isActive = pathname === item.href || (item.href === '/' && pathname === '/home');
+                        return (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className={`whitespace-nowrap inline-flex items-center justify-center px-4 xl:px-5 py-2.5 text-[10px] xl:text-[11px] font-bold tracking-wider transition-all duration-300 rounded-full border leading-none ${isActive
+                                    ? 'bg-black text-white border-black shadow-md'
+                                    : 'bg-black/5 text-[#444] border-transparent hover:bg-black/10 hover:text-black hover:scale-105'
+                                    }`}
+                            >
+                                {item.name}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 {/* Mobile/Tablet Toggle */}
@@ -134,28 +137,31 @@ const Navbar = () => {
 
                     {/* Menu Links - Responsive widths */}
                     <div className="flex-1 flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-5 py-8">
-                        {menuItems.map((item, idx) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                onClick={() => setIsOpen(false)}
-                                className={`
-                                    relative py-3 sm:py-4 px-8 sm:px-12 rounded-full font-medium text-center transition-all duration-500 hover:scale-105 group/item
-                                    ${pathname === item.href ? 'bg-white text-black scale-105' : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'}
-                                    text-[11px] sm:text-xs tracking-tight
-                                    ${idx === 0 ? 'w-[160px] sm:w-[180px]' : ''}
-                                    ${idx === 1 ? 'w-[180px] sm:w-[220px] md:w-[240px]' : ''}
-                                    ${idx === 2 ? 'w-[200px] sm:w-[250px] md:w-[280px]' : ''}
-                                    ${idx === 3 ? 'w-[220px] sm:w-[270px] md:w-[300px]' : ''}
-                                    ${idx === 4 ? 'w-[200px] sm:w-[280px] md:w-[320px]' : ''}
-                                    ${idx === 5 ? 'w-[180px] sm:w-[250px] md:w-[280px]' : ''}
-                                    ${idx === 6 ? 'w-[160px] sm:w-[200px] md:w-[220px]' : ''}
-                                `}
-                            >
-                                {item.name}
-                                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-px bg-white/40 transition-all group-hover/item:w-1/2" />
-                            </Link>
-                        ))}
+                        {menuItems.map((item, idx) => {
+                            const isActive = pathname === item.href || (item.href === '/' && pathname === '/home');
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className={`
+                                        relative py-3 sm:py-4 px-8 sm:px-12 rounded-full font-medium flex items-center justify-center transition-all duration-500 hover:scale-105 group/item
+                                        ${isActive ? 'bg-white text-black scale-105' : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'}
+                                        text-[11px] sm:text-xs tracking-tight leading-none
+                                        ${idx === 0 ? 'w-[160px] sm:w-[180px]' : ''}
+                                        ${idx === 1 ? 'w-[180px] sm:w-[220px] md:w-[240px]' : ''}
+                                        ${idx === 2 ? 'w-[200px] sm:w-[250px] md:w-[280px]' : ''}
+                                        ${idx === 3 ? 'w-[220px] sm:w-[270px] md:w-[300px]' : ''}
+                                        ${idx === 4 ? 'w-[200px] sm:w-[280px] md:w-[320px]' : ''}
+                                        ${idx === 5 ? 'w-[180px] sm:w-[250px] md:w-[280px]' : ''}
+                                        ${idx === 6 ? 'w-[160px] sm:w-[200px] md:w-[220px]' : ''}
+                                    `}
+                                >
+                                    {item.name}
+                                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-px bg-white/40 transition-all group-hover/item:w-1/2" />
+                                </Link>
+                            );
+                        })}
                     </div>
 
                     <div className="flex justify-between items-center text-white/40 text-[9px] sm:text-[10px] font-medium tracking-[0.15em] sm:tracking-[0.2em] border-t border-white/5 pt-6 sm:pt-8">
