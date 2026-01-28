@@ -87,7 +87,7 @@ const Ecosystem = () => {
                                     >
                                         <div className="flex flex-col items-start text-left">
                                             <span className="text-xs font-bold text-gray-300 mb-1">0{index + 1}</span>
-                                            <h3 className={`text-[20px] md:text-[24px] lg:text-[32px] font-medium uppercase tracking-tighter transition-all duration-500`}>
+                                            <h3 className={`text-[16px] md:text-[20px] lg:text-[24px] font-medium uppercase tracking-tighter transition-all duration-500`}>
                                                 {item.title}
                                             </h3>
                                         </div>

@@ -12,7 +12,7 @@ const BlogList = () => {
                 {/* Section Header */}
                 <div className="flex justify-between items-end mb-20">
                     <div className="max-w-xl">
-                        <h2 className="text-[32px] md:text-[40px] font-medium tracking-tight text-[#1A1A1A] uppercase mb-4">
+                        <h2 className="text-[28px] md:text-[36px] font-medium tracking-tight text-[#1A1A1A] uppercase mb-4">
                             LATEST <span className="text-[#F90]">ENTRIES</span>
                         </h2>
                         <p className="text-[14px] md:text-[16px] text-[#666]">
@@ -57,7 +57,7 @@ const BlogList = () => {
                                         </span>
                                     </div>
 
-                                    <h3 className="text-[20px] md:text-[22px] font-bold text-[#1A1A1A] leading-[1.2] uppercase tracking-tight line-clamp-3 min-h-[80px] group-hover:text-[#F90] transition-colors">
+                                    <h3 className="text-[16px] md:text-[18px] font-bold text-[#1A1A1A] leading-[1.3] uppercase tracking-tight line-clamp-3 min-h-[70px] group-hover:text-[#F90] transition-colors">
                                         {post.title}
                                     </h3>
 

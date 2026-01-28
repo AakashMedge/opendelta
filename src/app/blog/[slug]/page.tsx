@@ -31,7 +31,7 @@ export default async function BlogPostDetail({ params }: { params: Promise<{ slu
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
                     {/* Title */}
                     <div className="mb-12">
-                        <h1 className="text-[32px] md:text-[56px] lg:text-[72px] font-bold text-[#1A1A1A] leading-[1.05] uppercase tracking-tight max-w-6xl">
+                        <h1 className="text-[32px] md:text-[48px] lg:text-[56px] font-bold text-[#1A1A1A] leading-[1.05] uppercase tracking-tight max-w-6xl">
                             {post.title}
                         </h1>
                     </div>
@@ -117,7 +117,7 @@ export default async function BlogPostDetail({ params }: { params: Promise<{ slu
                                 <span className="text-[10px] md:text-[11px] font-black tracking-[0.2em] text-[#888] uppercase block mb-6">
                                     EXPLORE MORE ARTICLES
                                 </span>
-                                <h2 className="text-[36px] md:text-[48px] lg:text-[64px] font-bold text-[#1A1A1A] leading-[1.1] uppercase tracking-tighter">
+                                <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-bold text-[#1A1A1A] leading-[1.1] uppercase tracking-tighter">
                                     DISCOVER MORE<br />INSIGHTS AND<br />INSPIRATION
                                 </h2>
                             </div>
@@ -145,7 +145,7 @@ export default async function BlogPostDetail({ params }: { params: Promise<{ slu
                                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                                             />
                                         </div>
-                                        <h3 className="text-[20px] md:text-[28px] lg:text-[32px] font-bold text-[#1A1A1A] leading-tight uppercase tracking-tight group-hover:text-[#F90] transition-colors">
+                                        <h3 className="text-[16px] md:text-[20px] lg:text-[24px] font-bold text-[#1A1A1A] leading-tight uppercase tracking-tight group-hover:text-[#F90] transition-colors">
                                             {relatedPost.title}
                                         </h3>
                                     </div>
