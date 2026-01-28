@@ -74,11 +74,11 @@ const Navbar = () => {
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex justify-between items-center">
                 {/* Logo - with consistent sizing */}
                 <Link href="/" className="shrink-0">
-                    <Logo className="w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px]" />
+                    <Logo className="w-[100px] sm:w-[110px] md:w-[120px] lg:w-[130px]" />
                 </Link>
 
                 {/* Desktop Menu - Matches Image 2 reference */}
-                <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+                <div className="hidden lg:flex items-center gap-3 xl:gap-4">
                     {menuItems.map((item) => {
                         const isActive = pathname === item.href || (item.href === '/' && pathname === '/home');
                         return (
@@ -123,7 +123,7 @@ const Navbar = () => {
 
                 <div className="flex flex-col h-full p-6 sm:p-8 md:p-12 relative z-10">
                     <div className="flex justify-between items-center">
-                        <Logo isWhite className="w-[90px] sm:w-[100px] md:w-[110px]" />
+                        <Logo isWhite className="w-[80px] sm:w-[90px] md:w-[100px]" />
                         <button
                             onClick={() => setIsOpen(false)}
                             className="bg-white/10 hover:bg-white/20 p-3 sm:p-4 rounded-full transition-all group"

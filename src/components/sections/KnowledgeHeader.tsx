@@ -5,17 +5,20 @@ import Link from 'next/link';
 
 const KnowledgeHeader = () => {
     return (
-        <section className="bg-white pt-32 pb-24 overflow-hidden">
+        <section
+            className="bg-white pb-24 overflow-hidden"
+            style={{ paddingTop: 'calc(var(--navbar-height, 80px) + 40px)' }}
+        >
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
-                <h1 className="text-[32px] md:text-[64px] lg:text-[80px] font-medium text-[#1A1A1A] leading-tight uppercase tracking-tight mb-8">
+                <h1 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[56px] font-medium text-[#1A1A1A] leading-tight uppercase tracking-tight mb-8">
                     ONE SOCIETAL PROBLEM AT A TIME
                 </h1>
 
-                <h2 className="text-[24px] md:text-[42px] lg:text-[52px] font-medium text-[#1A1A1A] uppercase mb-6">
+                <h2 className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-medium text-[#1A1A1A] uppercase mb-10">
                     GOOD THINGS TAKE TIME
                 </h2>
 
-                <p className="text-[14px] md:text-[16px] text-[#666] mb-20 text-center">
+                <p className="text-[12px] md:text-[14px] font-black tracking-[0.3em] text-black/40 mb-20 text-center uppercase">
                     Connect with us
                 </p>
 
