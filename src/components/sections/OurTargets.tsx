@@ -75,20 +75,20 @@ const OurTargets = () => {
     };
 
     return (
-        <section className="bg-white py-20 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
+        <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 overflow-hidden">
             {/* Header Section */}
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start mb-20 lg:mb-28">
+            <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-16 xl:gap-24 items-start mb-12 sm:mb-16 md:mb-20 lg:mb-28 max-w-[1440px] mx-auto">
                 <div className="flex-1">
-                    <span className="text-[12px] font-bold tracking-[0.2em] text-[#666] uppercase mb-4 block">
+                    <span className="text-[10px] sm:text-[11px] md:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] text-[#666] uppercase mb-3 sm:mb-4 block">
                         OUR TARGETS
                     </span>
-                    <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-medium leading-[1.1] text-[#1A1A1A] tracking-tight max-w-2xl uppercase">
+                    <h2 className="text-[26px] sm:text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] font-medium leading-[1.1] text-[#1A1A1A] tracking-tight max-w-2xl uppercase">
                         AREAS WE FOCUS ON
                     </h2>
                 </div>
 
                 <div className="flex-1 lg:mt-10">
-                    <p className="text-[16px] md:text-[18px] lg:text-[19px] leading-relaxed text-[#444] font-medium">
+                    <p className="text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] xl:text-[19px] leading-relaxed text-[#444] font-medium">
                         We orchestrate a multifaceted approach to address India&apos;s grassroots challenges.
                         The process initiates with a thorough analysis and filtration of societal issues,
                         leveraging various sourcing methods to identify critical problems around the following areas
@@ -97,7 +97,7 @@ const OurTargets = () => {
             </div>
 
             {/* Premium Click-to-Expand List Section */}
-            <div className="border-t border-black/10">
+            <div className="border-t border-black/10 max-w-[1440px] mx-auto">
                 {targetAreas.map((area) => (
                     <div
                         key={area.id}
@@ -106,7 +106,7 @@ const OurTargets = () => {
                     >
                         {/* 1. Sequential Image Reveal */}
                         <div
-                            className={`relative transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden rounded-[24px] ${activeId === area.id ? 'h-[280px] md:h-[500px] mt-12 mb-4' : 'h-0'
+                            className={`relative transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-[24px] ${activeId === area.id ? 'h-[180px] sm:h-[240px] md:h-[360px] lg:h-[500px] mt-8 sm:mt-10 lg:mt-12 mb-4' : 'h-0'
                                 }`}
                         >
                             <Image
@@ -119,8 +119,8 @@ const OurTargets = () => {
                         </div>
 
                         {/* 2. Text Row with Interactive Icon and Accent Line */}
-                        <div className="py-10 md:py-14 flex items-center justify-between">
-                            <div className="flex items-start gap-6 md:gap-10">
+                        <div className="py-6 sm:py-8 md:py-10 lg:py-14 flex items-center justify-between">
+                            <div className="flex items-start gap-4 sm:gap-6 md:gap-10">
                                 {/* Vertical Accent Line + Number */}
                                 <div className="flex items-center gap-4 mt-1.5">
                                     <div className={`w-[2px] h-4 transition-all duration-500 bg-black ${activeId === area.id ? 'opacity-100 scale-y-150' : 'opacity-0 scale-y-50'
@@ -130,7 +130,7 @@ const OurTargets = () => {
                                         {area.num}
                                     </span>
                                 </div>
-                                <h3 className={`text-[16px] md:text-[20px] lg:text-[22px] font-medium leading-relaxed uppercase tracking-wide transition-colors duration-500 max-w-4xl ${activeId === area.id ? 'text-black' : 'text-[#555] group-hover:text-black'
+                                <h3 className={`text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-medium leading-relaxed uppercase tracking-wide transition-colors duration-500 max-w-4xl ${activeId === area.id ? 'text-black' : 'text-[#555] group-hover:text-black'
                                     }`}>
                                     {area.text}
                                 </h3>

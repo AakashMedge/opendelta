@@ -46,14 +46,14 @@ const AboutFunding = () => {
     ];
 
     return (
-        <section ref={sectionRef} className="bg-white py-24 md:py-32 overflow-hidden">
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-                <div className="max-w-5xl space-y-10">
+        <section ref={sectionRef} className="bg-white py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 overflow-hidden">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+                <div className="max-w-5xl space-y-6 sm:space-y-8 lg:space-y-10">
                     {paragraphs.map((p, idx) => (
                         <p
                             key={idx}
                             className={`
-                                text-[17px] md:text-[20px] lg:text-[22px] leading-[1.6] text-[#333] transition-all duration-1000
+                                text-[15px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] leading-[1.6] text-[#333] transition-all duration-1000
                                 ${p.isBold ? 'font-bold' : 'font-medium opacity-80'}
                                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
                             `}

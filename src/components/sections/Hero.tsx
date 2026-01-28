@@ -6,19 +6,19 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex flex-col bg-white pt-[100px] lg:pt-[140px]">
+        <section className="relative min-h-screen flex flex-col bg-white pt-[80px] sm:pt-[100px] lg:pt-[120px]">
             {/* Main Content Area */}
-            <div className="flex-1 flex flex-col lg:flex-row px-6 md:px-12 lg:px-20 gap-16 lg:gap-32 items-start max-w-[1440px] mx-auto w-full">
+            <div className="flex-1 flex flex-col lg:flex-row px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 gap-8 sm:gap-12 lg:gap-16 xl:gap-24 items-start max-w-[1440px] mx-auto w-full py-6 sm:py-8 lg:py-12">
 
                 {/* Left Content */}
                 <div className="flex-1 flex flex-col">
-                    <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-medium leading-[1.05] tracking-tight text-[#1A1A1A] mb-12 uppercase">
+                    <h1 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[56px] font-medium leading-[1.05] tracking-tight text-[#1A1A1A] mb-6 sm:mb-8 lg:mb-12 uppercase">
                         TAPPING INDIA&apos;S<br />
                         INTELLECTUAL<br />
                         CAPITAL SURPLUS
                     </h1>
 
-                    <div className="space-y-8 text-[#444] text-[15px] md:text-[16px] lg:text-[17px] leading-relaxed max-w-2xl">
+                    <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-[#444] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] leading-relaxed max-w-2xl">
                         <p>
                             At the intersection of social responsibility and innovation lies <strong>Open Delta</strong>,
                             a <strong>not-for-profit foundation</strong> with a mission to transform <strong>grassroots
@@ -43,15 +43,15 @@ const Hero = () => {
                         </p>
                     </div>
 
-                    <div className="mt-12">
-                        <Link href="/open-thought-prj" className="inline-block px-10 py-3.5 bg-[#1A1A1A] text-white text-[12px] font-bold rounded-full tracking-widest hover:bg-black/80 transition-all uppercase">
+                    <div className="mt-8 sm:mt-10 lg:mt-12">
+                        <Link href="/open-thought-prj" className="inline-block px-6 sm:px-8 lg:px-10 py-3 sm:py-3.5 bg-[#1A1A1A] text-white text-[11px] sm:text-[12px] font-bold rounded-full tracking-widest hover:bg-black/80 transition-all uppercase">
                             JOIN US
                         </Link>
                     </div>
                 </div>
 
                 {/* Right Image */}
-                <div className="flex-1 w-full relative">
+                <div className="flex-1 w-full relative mt-8 lg:mt-0">
                     <div className="relative w-full aspect-4/5 rounded-[4px] overflow-hidden">
                         <Image
                             src="/hero-illustration.png"
@@ -65,15 +65,15 @@ const Hero = () => {
             </div>
 
             {/* Bottom Footer Area */}
-            <div className="w-full px-6 md:px-12 lg:px-20 py-10 flex justify-between items-center bg-white">
-                <div className="flex gap-4">
+            <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-6 sm:py-8 lg:py-10 flex flex-col sm:flex-row justify-between items-center gap-4 bg-white">
+                <div className="flex gap-3 sm:gap-4">
                     <SocialIcon type="instagram" />
                     <SocialIcon type="twitter" />
                 </div>
 
                 <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
-                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#1A1A1A]">SCROLL TO EXPLORE</span>
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current transition-transform group-hover:translate-y-1" strokeWidth="2.5">
+                    <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.15em] sm:tracking-[0.2em] text-[#1A1A1A]">SCROLL TO EXPLORE</span>
+                    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-none stroke-current transition-transform group-hover:translate-y-1" strokeWidth="2.5">
                         <path d="M7 13l5 5 5-5M12 6v12" />
                     </svg>
                 </div>
@@ -90,16 +90,16 @@ const SocialIcon = ({ type }: { type: 'instagram' | 'twitter' }) => {
             href={type === 'instagram' ? instagramUrl : "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-9 h-9 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 group"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 group"
         >
             {type === 'instagram' ? (
-                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="2">
+                <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-none stroke-current" strokeWidth="2">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
             ) : (
-                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-none stroke-current transition-transform group-hover:scale-110" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-5 sm:h-5 fill-none stroke-current transition-transform group-hover:scale-110" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
                 </svg>
             )}

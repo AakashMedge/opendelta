@@ -41,22 +41,22 @@ const Ecosystem = () => {
 
     return (
         <div className="bg-white">
-            <section className="py-24 lg:py-40 px-6 md:px-12 lg:px-20 overflow-hidden relative">
-                <div className="max-w-7xl mx-auto">
+            <section className="py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 overflow-hidden relative">
+                <div className="max-w-[1440px] mx-auto">
                     {/* Header - Premium Refinement */}
-                    <div className="mb-20 lg:mb-32">
+                    <div className="mb-12 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-32">
                         <div className="flex items-center gap-4 mb-6">
                             <div className="h-px w-12 bg-black/20" />
-                            <span className="text-[10px] md:text-[11px] font-black tracking-[0.4em] text-[#888] uppercase max-w-sm">
+                            <span className="text-[9px] sm:text-[10px] md:text-[11px] font-black tracking-[0.3em] sm:tracking-[0.4em] text-[#888] uppercase max-w-sm">
                                 DISMANTLING BARRIERS • CREATING POTENTIAL
                             </span>
                         </div>
-                        <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-medium leading-[0.9] text-[#1A1A1A] tracking-tighter uppercase mb-2">
+                        <h2 className="text-[26px] sm:text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] font-medium leading-[0.9] text-[#1A1A1A] tracking-tighter uppercase mb-2">
                             OUR <span className="text-[#F90]">ECOSYSTEM</span>
                         </h2>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-stretch">
+                    <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-24 xl:gap-32 items-stretch">
 
                         {/* LEFT: Selector Column (Desktop) / Tab Scroll (Mobile) */}
                         <div className="w-full lg:w-[450px] flex flex-col justify-center">
@@ -97,7 +97,7 @@ const Ecosystem = () => {
 
                             {/* Active Description */}
                             <div className="mt-12 lg:mt-20">
-                                <p className="text-lg md:text-xl lg:text-2xl text-gray-400 font-medium leading-relaxed max-w-md transition-all duration-700">
+                                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-medium leading-relaxed max-w-md transition-all duration-700">
                                     {ecoItems[activeIndex].desc}
                                 </p>
                             </div>

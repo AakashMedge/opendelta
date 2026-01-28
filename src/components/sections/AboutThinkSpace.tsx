@@ -35,21 +35,21 @@ const AboutThinkSpace = () => {
     ];
 
     return (
-        <section className="bg-white py-20 md:py-32 overflow-hidden">
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12" ref={containerRef}>
+        <section className="bg-white py-12 sm:py-16 md:py-24 lg:py-28 xl:py-32 overflow-hidden">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12" ref={containerRef}>
                 {/* Section Title */}
-                <div className="text-[12px] md:text-[14px] font-black tracking-[0.2em] text-[#888] mb-12 uppercase reveal-item opacity-0 translate-y-4 transition-all duration-700 data-[visible=true]:opacity-100 data-[visible=true]:translate-y-0" data-index="-1" data-visible={visibleIndexes.includes(-1)}>
+                <div className="text-[10px] sm:text-[11px] md:text-[12px] lg:text-[14px] font-black tracking-[0.15em] sm:tracking-[0.2em] text-[#888] mb-8 sm:mb-10 lg:mb-12 uppercase reveal-item opacity-0 translate-y-4 transition-all duration-700 data-[visible=true]:opacity-100 data-[visible=true]:translate-y-0" data-index="-1" data-visible={visibleIndexes.includes(-1)}>
                     ABOUT THINKSPACE
                 </div>
 
                 {/* Content Paragraphs */}
-                <div className="space-y-10 md:space-y-12">
+                <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
                     {paragraphs.map((text, index) => (
                         <p
                             key={index}
                             data-index={index}
                             data-visible={visibleIndexes.includes(index)}
-                            className="text-[16px] md:text-[18px] lg:text-[20px] leading-[1.6] text-[#333] font-medium max-w-6xl reveal-item opacity-0 translate-y-10 transition-all duration-1000 data-[visible=true]:opacity-100 data-[visible=true]:translate-y-0"
+                            className="text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px] leading-[1.6] text-[#333] font-medium max-w-6xl reveal-item opacity-0 translate-y-10 transition-all duration-1000 data-[visible=true]:opacity-100 data-[visible=true]:translate-y-0"
                         >
                             {text}
                         </p>

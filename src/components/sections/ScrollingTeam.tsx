@@ -104,10 +104,10 @@ const ScrollingTeam = () => {
     };
 
     return (
-        <div className="w-full bg-[#F3F3F3] py-20 overflow-hidden border-t border-gray-200/30">
+        <div className="w-full bg-[#F3F3F3] py-12 sm:py-16 md:py-20 overflow-hidden border-t border-gray-200/30">
             <div
                 ref={scrollRef}
-                className="flex gap-10 md:gap-16 overflow-x-auto select-none cursor-grab active:cursor-grabbing px-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                className="flex gap-6 sm:gap-8 md:gap-12 lg:gap-16 overflow-x-auto select-none cursor-grab active:cursor-grabbing px-4 sm:px-6 md:px-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}
                 onMouseUp={stopDragging}
@@ -118,10 +118,10 @@ const ScrollingTeam = () => {
                 {extendedMembers.map((member, index) => (
                     <div
                         key={index}
-                        className="flex-shrink-0 w-[260px] md:w-[340px] lg:w-[400px] group pointer-events-none"
+                        className="shrink-0 w-[200px] sm:w-[260px] md:w-[320px] lg:w-[380px] xl:w-[400px] group pointer-events-none"
                     >
                         {/* Image Container */}
-                        <div className="relative w-full aspect-[1.15/1] overflow-hidden rounded-[24px] md:rounded-[32px] mb-8 bg-transparent transition-all duration-700 ease-out group-hover:shadow-2xl group-hover:shadow-black/5 group-hover:-translate-y-2 pointer-events-auto">
+                        <div className="relative w-full aspect-[1.15/1] overflow-hidden rounded-xl sm:rounded-2xl md:rounded-[24px] lg:rounded-[32px] mb-5 sm:mb-6 md:mb-8 bg-transparent transition-all duration-700 ease-out group-hover:shadow-2xl group-hover:shadow-black/5 group-hover:-translate-y-2 pointer-events-auto">
                             <Image
                                 src={member.image}
                                 alt={member.name}
@@ -134,9 +134,9 @@ const ScrollingTeam = () => {
 
                         {/* Text UI */}
                         <div className="px-4 pointer-events-auto">
-                            <h3 className="text-xl md:text-2xl font-bold text-[#1A1A1A] mb-3 tracking-tight group-hover:text-black transition-colors">{member.name}</h3>
-                            <div className="h-[2px] w-0 bg-black group-hover:w-full transition-all duration-500 mb-4 opacity-10" />
-                            <p className="text-[13px] md:text-[14px] text-[#666] font-medium leading-[1.6]">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1A1A1A] mb-2 sm:mb-3 tracking-tight group-hover:text-black transition-colors">{member.name}</h3>
+                            <div className="h-[2px] w-0 bg-black group-hover:w-full transition-all duration-500 mb-3 sm:mb-4 opacity-10" />
+                            <p className="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] text-[#666] font-medium leading-[1.6]">
                                 {member.role}
                             </p>
                         </div>

@@ -64,17 +64,17 @@ const AboutOpenThought = () => {
     ];
 
     return (
-        <section className="bg-white py-24 md:py-32 overflow-hidden">
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12" ref={containerRef}>
+        <section className="bg-white py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 overflow-hidden">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12" ref={containerRef}>
                 {/* Title */}
                 <h2
                     data-index="999"
-                    className={`text-[12px] md:text-[14px] font-black tracking-[0.2em] text-[#888] mb-16 uppercase reveal-item transition-all duration-700 ${visibleIndexes.includes(999) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                    className={`text-[10px] sm:text-[11px] md:text-[12px] lg:text-[14px] font-black tracking-[0.15em] sm:tracking-[0.2em] text-[#888] mb-10 sm:mb-12 lg:mb-16 uppercase reveal-item transition-all duration-700 ${visibleIndexes.includes(999) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                 >
                     FROM OPEN SOURCE TO OPEN THOUGHT: EXPANDING THE HORIZON
                 </h2>
 
-                <div className="space-y-12 md:space-y-16 max-w-5xl">
+                <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16 max-w-5xl">
                     {sections.map((section, idx) => {
                         const isVisible = visibleIndexes.includes(idx);
 
@@ -83,7 +83,7 @@ const AboutOpenThought = () => {
                                 <h3
                                     key={idx}
                                     data-index={idx}
-                                    className={`text-[24px] md:text-[32px] font-medium tracking-tight text-[#1A1A1A] reveal-item transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                                    className={`text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-medium tracking-tight text-[#1A1A1A] reveal-item transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                                 >
                                     {section.content}
                                 </h3>
@@ -96,7 +96,7 @@ const AboutOpenThought = () => {
                                         <li
                                             key={i}
                                             data-index={`${idx}${i}`}
-                                            className={`flex gap-4 text-[16px] md:text-[18px] lg:text-[19px] text-[#333] reveal-item transition-all duration-700 ${visibleIndexes.includes(Number(`${idx}${i}`)) ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}
+                                            className={`flex gap-3 sm:gap-4 text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] xl:text-[19px] text-[#333] reveal-item transition-all duration-700 ${visibleIndexes.includes(Number(`${idx}${i}`)) ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}
                                             style={{ transitionDelay: `${i * 100}ms` }}
                                         >
                                             <span className="shrink-0 mt-2.5 w-1.5 h-1.5 rounded-full bg-black"></span>
@@ -112,7 +112,7 @@ const AboutOpenThought = () => {
                             <p
                                 key={idx}
                                 data-index={idx}
-                                className={`text-[16px] md:text-[18px] lg:text-[20px] leading-[1.6] text-[#444] font-medium reveal-item transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                                className={`text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px] leading-[1.6] text-[#444] font-medium reveal-item transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                             >
                                 {section.content}
                             </p>

@@ -11,32 +11,32 @@ const FundingAccessHero = () => {
     }, []);
 
     return (
-        <section className="relative min-h-screen bg-[#F1F5EB] pt-[150px] pb-24 overflow-hidden">
-            <div className={`max-w-[1440px] mx-auto px-6 md:px-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section className="relative min-h-screen bg-[#F1F5EB] pt-[100px] sm:pt-[120px] lg:pt-[150px] pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
+            <div className={`max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Small Label */}
-                <div className="text-[10px] md:text-[11px] font-black tracking-[0.2em] text-[#333] mb-12 uppercase">
+                <div className="text-[9px] sm:text-[10px] md:text-[11px] font-black tracking-[0.15em] sm:tracking-[0.2em] text-[#333] mb-8 sm:mb-10 lg:mb-12 uppercase">
                     DEMYSTIFYING FUNDING ACCESS
                 </div>
 
                 {/* Content Section */}
                 <div className="max-w-4xl">
-                    <h1 className="text-[32px] md:text-[48px] lg:text-[56px] font-medium leading-none tracking-tight text-[#1A1A1A] mb-12 uppercase">
+                    <h1 className="text-[26px] sm:text-[32px] md:text-[44px] lg:text-[52px] xl:text-[56px] font-medium leading-none tracking-tight text-[#1A1A1A] mb-8 sm:mb-10 lg:mb-12 uppercase">
                         DIVERSE FUNDING DRIVING SOCIAL CHANGE
                     </h1>
 
-                    <div className="space-y-8 max-w-3xl">
-                        <p className="text-[16px] md:text-[18px] leading-[1.6] text-[#333] font-medium">
+                    <div className="space-y-5 sm:space-y-6 lg:space-y-8 max-w-3xl">
+                        <p className="text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-[1.6] text-[#333] font-medium">
                             In today&apos;s rapidly evolving world, the pursuit of social change initiatives requires more than just passion and good intentions. It demands a strategic approach to funding and expertise. By leveraging government grants, corporate funding, and venture capital insights, organizations can create a robust ecosystem for driving sustainable social impact.
                         </p>
 
-                        <p className="text-[16px] md:text-[18px] leading-[1.6] text-[#333] font-medium">
+                        <p className="text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-[1.6] text-[#333] font-medium">
                             Government grants offer a unique advantage in this landscape. These non-repayable funds allow organizations to focus entirely on their mission without the burden of debt. Moreover, securing such grants enhances an organization&apos;s credibility, often attracting additional support from other donors and partners. Government funding also comes with the benefit of aligning initiatives with national priorities, ensuring that social change efforts resonate with broader policy objectives.
                         </p>
                     </div>
                 </div>
 
                 {/* Social Bar */}
-                <div className="mt-32 flex gap-4">
+                <div className="mt-16 sm:mt-24 lg:mt-32 flex gap-3 sm:gap-4">
                     <SocialIcon type="instagram" />
                     <SocialIcon type="twitter" />
                 </div>
@@ -53,7 +53,7 @@ const SocialIcon = ({ type }: { type: 'instagram' | 'twitter' }) => {
             href={type === 'instagram' ? instagramUrl : "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 cursor-pointer group"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-black/10 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 cursor-pointer group"
         >
             {type === 'instagram' ? (
                 <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none transition-transform group-hover:scale-110" strokeWidth="2">

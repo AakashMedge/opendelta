@@ -1,13 +1,63 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-[#F3F3F3] text-gray-900 antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Responsive base font sizing */
+  html {
+    font-size: 14px;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 16px;
+    }
   }
 
   p {
     @apply hyphens-none text-left;
+  }
+
+  /* Improve touch targets on mobile */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent horizontal overflow */
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Better heading defaults */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+    font-weight: 500;
   }
 }
 
@@ -72,5 +122,25 @@
 
   .animate-float-delayed {
     animation: float-delayed 5s ease-in-out infinite;
+  }
+
+  /* Responsive container padding utility */
+  .container-padding {
+    @apply px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20;
+  }
+
+  /* Responsive section spacing */
+  .section-spacing {
+    @apply py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -85,13 +85,13 @@ const FAQSection = () => {
     ];
 
     return (
-        <section className="bg-white py-24 md:py-32">
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-                <div className="text-center mb-20 animate-fade-in">
-                    <h3 className="text-[12px] font-black tracking-[0.4em] text-[#888] mb-4 uppercase">
+        <section className="bg-white py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+                <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-fade-in">
+                    <h3 className="text-[10px] sm:text-[11px] md:text-[12px] font-black tracking-[0.3em] sm:tracking-[0.4em] text-[#888] mb-3 sm:mb-4 uppercase">
                         DISCOVER THE INFORMATION YOU NEED
                     </h3>
-                    <h2 className="text-[32px] md:text-[48px] font-medium text-[#1A1A1A] uppercase tracking-tight">
+                    <h2 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] font-medium text-[#1A1A1A] uppercase tracking-tight">
                         YOUR QUESTIONS, ANSWERED
                     </h2>
                 </div>
@@ -101,15 +101,15 @@ const FAQSection = () => {
                         <div key={index} className="border-t border-black/10 last:border-b last:border-black/10">
                             <button
                                 onClick={() => setOpenIndex(index === openIndex ? null : index)}
-                                className="w-full py-8 md:py-12 flex justify-between items-center group text-left"
+                                className="w-full py-5 sm:py-6 md:py-8 lg:py-12 flex justify-between items-center group text-left"
                             >
-                                <span className={`text-[19px] md:text-[26px] font-medium uppercase tracking-tight pr-8 transition-colors duration-300 ${openIndex === index ? 'text-[#1A1A1A]' : 'text-[#222]'}`}>
+                                <span className={`text-[14px] sm:text-[16px] md:text-[20px] lg:text-[26px] font-medium uppercase tracking-tight pr-4 sm:pr-8 transition-colors duration-300 ${openIndex === index ? 'text-[#1A1A1A]' : 'text-[#222]'}`}>
                                     {faq.question}
                                 </span>
-                                <div className={`flex-shrink-0 w-10 md:w-12 h-10 md:h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center transition-all duration-500`}>
+                                <div className={`shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center transition-all duration-500`}>
                                     <svg
                                         viewBox="0 0 24 24"
-                                        className={`w-5 h-5 md:w-6 md:h-6 fill-none stroke-white transition-transform duration-500 ${openIndex === index ? 'rotate-180' : 'rotate-90'}`}
+                                        className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 fill-none stroke-white transition-transform duration-500 ${openIndex === index ? 'rotate-180' : 'rotate-90'}`}
                                         strokeWidth="3"
                                     >
                                         <path d="M7 17l10-10M17 17V7H7" strokeLinecap="square" />
@@ -117,9 +117,9 @@ const FAQSection = () => {
                                 </div>
                             </button>
                             <div
-                                className={`overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${openIndex === index ? 'max-h-[800px] opacity-100 pb-12' : 'max-h-0 opacity-0'}`}
+                                className={`overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${openIndex === index ? 'max-h-[800px] opacity-100 pb-8 sm:pb-10 lg:pb-12' : 'max-h-0 opacity-0'}`}
                             >
-                                <div className="text-[16px] md:text-[18px] text-[#555] font-medium leading-[1.6] whitespace-pre-line max-w-3xl">
+                                <div className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-[#555] font-medium leading-[1.6] whitespace-pre-line max-w-3xl">
                                     {faq.answer}
                                 </div>
                             </div>

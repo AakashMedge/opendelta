@@ -4,16 +4,20 @@ import React from 'react';
 import Image from 'next/image';
 
 const Logo = ({ isWhite = false, className = "" }: { isWhite?: boolean, className?: string }) => (
-    <div className={`group cursor-pointer ${className}`}>
+    <div className={`group cursor-pointer flex items-center ${className}`}>
         <Image
             src="/logo.png"
             alt="Open Delta Logo"
             width={120}
             height={48}
-            className={`object-contain transition-transform duration-500 group-hover:scale-105 ${isWhite ? 'brightness-0 invert' : 'mix-blend-multiply brightness-[1.05] contrast-[1.1]'}`}
+            className={`w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105 ${isWhite
+                ? 'brightness-0 invert' // Make logo white for dark backgrounds
+                : 'mix-blend-multiply brightness-[1.05] contrast-[1.1]'
+                }`}
             priority
         />
     </div>
 );
 
 export default Logo;
+

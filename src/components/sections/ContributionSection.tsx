@@ -47,11 +47,11 @@ const ContributionSection = () => {
     ];
 
     return (
-        <section ref={sectionRef} className="bg-[#E9F2F7] py-20 md:py-32 overflow-hidden">
-            <div className={`max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-12 lg:gap-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+        <section ref={sectionRef} className="bg-[#E9F2F7] py-12 sm:py-16 md:py-24 lg:py-28 xl:py-32 overflow-hidden">
+            <div className={`max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 {/* Left Heading */}
                 <div className="lg:w-1/4">
-                    <h2 className="text-[40px] md:text-[54px] lg:text-[64px] font-medium leading-[1.1] tracking-tight text-[#1A1A1A]">
+                    <h2 className="text-[28px] sm:text-[32px] md:text-[44px] lg:text-[54px] xl:text-[64px] font-medium leading-[1.1] tracking-tight text-[#1A1A1A]">
                         HOW<br />
                         CAN I<br />
                         CONTRIBUTE
@@ -59,16 +59,16 @@ const ContributionSection = () => {
                 </div>
 
                 {/* Lists Grid */}
-                <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+                <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-16">
                     {/* Contributors Column */}
                     <div className={`flex flex-col transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                        <h3 className="text-[32px] md:text-[42px] font-medium leading-none text-[#1A1A1A] mb-8 uppercase tracking-tight">
+                        <h3 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[42px] font-medium leading-none text-[#1A1A1A] mb-6 sm:mb-8 uppercase tracking-tight">
                             FOR<br />
                             CONTRIBUTORS
                         </h3>
-                        <ul className="space-y-4 mb-12">
+                        <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-10 lg:mb-12">
                             {contributorTasks.map((task, idx) => (
-                                <li key={idx} className="flex gap-3 text-[14px] md:text-[15px] text-[#444] leading-relaxed">
+                                <li key={idx} className="flex gap-2 sm:gap-3 text-[13px] sm:text-[14px] md:text-[15px] text-[#444] leading-relaxed">
                                     <span className="shrink-0 mt-2 w-1 h-1 rounded-full bg-black"></span>
                                     <span>{task}</span>
                                 </li>
@@ -84,13 +84,13 @@ const ContributionSection = () => {
 
                     {/* Hosts Column */}
                     <div className={`flex flex-col transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                        <h3 className="text-[32px] md:text-[42px] font-medium leading-none text-[#1A1A1A] mb-8 uppercase tracking-tight">
+                        <h3 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[42px] font-medium leading-none text-[#1A1A1A] mb-6 sm:mb-8 uppercase tracking-tight">
                             FOR<br />
                             HOSTS
                         </h3>
-                        <ul className="space-y-4 mb-12">
+                        <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-10 lg:mb-12">
                             {hostTasks.map((task, idx) => (
-                                <li key={idx} className="flex gap-3 text-[14px] md:text-[15px] text-[#444] leading-relaxed">
+                                <li key={idx} className="flex gap-2 sm:gap-3 text-[13px] sm:text-[14px] md:text-[15px] text-[#444] leading-relaxed">
                                     <span className="shrink-0 mt-2 w-1 h-1 rounded-full bg-black"></span>
                                     <span>{task}</span>
                                 </li>
