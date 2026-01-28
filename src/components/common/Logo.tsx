@@ -6,13 +6,13 @@ import Image from 'next/image';
 const Logo = ({ isWhite = false, className = "" }: { isWhite?: boolean, className?: string }) => (
     <div className={`group cursor-pointer flex items-center ${className}`}>
         <Image
-            src="/logo.png"
+            src="/logo_old.png"
             alt="Open Delta Logo"
-            width={120}
-            height={48}
+            width={180}
+            height={60}
             className={`w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105 ${isWhite
                 ? 'brightness-0 invert' // Make logo white for dark backgrounds
-                : 'mix-blend-multiply brightness-[1.05] contrast-[1.1]'
+                : ''
                 }`}
             priority
         />

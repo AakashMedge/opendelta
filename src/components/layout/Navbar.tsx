@@ -74,20 +74,18 @@ const Navbar = () => {
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex justify-between items-center">
                 {/* Logo - with consistent sizing */}
                 <Link href="/" className="shrink-0">
-                    <Logo className="w-[90px] sm:w-[100px] md:w-[110px] lg:w-[120px]" />
+                    <Logo className="w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px]" />
                 </Link>
 
-                {/* Desktop Menu - Fixed font sizes for consistency */}
-                <div className="hidden lg:flex items-center gap-1 xl:gap-2">
-                    {menuItems.map((item, idx) => (
+                {/* Desktop Menu - Matches Image 2 reference */}
+                <div className="hidden lg:flex items-center gap-2 xl:gap-3">
+                    {menuItems.map((item) => (
                         <Link
                             key={item.name}
                             href={item.href}
-                            className={`whitespace-nowrap px-3 xl:px-4 py-2 text-[10px] xl:text-[11px] font-semibold tracking-wide transition-all duration-300 rounded-full border ${pathname === item.href
-                                ? 'bg-black text-white border-transparent'
-                                : idx === menuItems.length - 1
-                                    ? 'bg-black/5 text-black border-black/10 hover:bg-black/10'
-                                    : 'text-[#444] hover:bg-black/5 hover:border-black/5 border-transparent'
+                            className={`whitespace-nowrap px-4 xl:px-5 py-2 text-[10px] xl:text-[11px] font-bold tracking-wider transition-all duration-300 rounded-full border border-transparent ${pathname === item.href
+                                ? 'bg-[#1A1A1A] text-white ring-1 ring-white/10 shadow-lg'
+                                : 'bg-[#222] text-[#eee] hover:bg-black hover:text-white hover:scale-105'
                                 }`}
                         >
                             {item.name}
