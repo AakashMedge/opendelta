@@ -15,7 +15,10 @@ const BlogHero = () => {
                 <div className="absolute inset-0 opacity-40 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[40px_40px]" />
             </div>
 
-            <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 w-full pt-[100px] sm:pt-[120px] lg:pt-[150px] pb-16 sm:pb-24 lg:pb-32">
+            <div
+                className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 w-full pb-16 sm:pb-24 lg:pb-32"
+                style={{ paddingTop: 'calc(var(--navbar-height, 100px) + 20px)' }}
+            >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-end">
                     <div className="lg:col-span-8">
                         {/* Eyebrow */}

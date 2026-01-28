@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -20,6 +20,15 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
+    const navRef = useRef<HTMLElement>(null);
+
+    // Function to update CSS variable with actual navbar height
+    const updateNavbarHeight = useCallback(() => {
+        if (navRef.current) {
+            const height = navRef.current.getBoundingClientRect().height;
+            document.documentElement.style.setProperty('--navbar-height', `${height}px`);
+        }
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,6 +37,20 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Update navbar height on mount, resize, and scroll state change
+    useEffect(() => {
+        updateNavbarHeight();
+        window.addEventListener('resize', updateNavbarHeight);
+        return () => window.removeEventListener('resize', updateNavbarHeight);
+    }, [updateNavbarHeight]);
+
+    // Update height when scroll state changes (navbar padding changes)
+    useEffect(() => {
+        // Small delay to allow transition to complete
+        const timer = setTimeout(updateNavbarHeight, 50);
+        return () => clearTimeout(timer);
+    }, [scrolled, updateNavbarHeight]);
 
     // Prevent body scroll when mobile menu is open
     useEffect(() => {
@@ -42,10 +65,12 @@ const Navbar = () => {
     }, [isOpen]);
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled
-            ? 'py-2 md:py-3 bg-[#F5F5F5] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]'
-            : 'py-3 md:py-4 bg-[#F5F5F5]'
-            }`}>
+        <nav
+            ref={navRef}
+            className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled
+                ? 'py-2 md:py-3 bg-[#F5F5F5] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]'
+                : 'py-3 md:py-4 bg-[#F5F5F5]'
+                }`}>
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex justify-between items-center">
                 {/* Logo - with consistent sizing */}
                 <Link href="/" className="shrink-0">

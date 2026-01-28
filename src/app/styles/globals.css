@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* SSR-safe fallback for navbar height - will be overridden by JS after hydration */
+:root {
+  --navbar-height: 80px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --navbar-height: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --navbar-height: 120px;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

@@ -6,7 +6,10 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex flex-col bg-white pt-[80px] sm:pt-[100px] lg:pt-[120px]">
+        <section
+            className="relative min-h-screen flex flex-col bg-white"
+            style={{ paddingTop: 'var(--navbar-height, 80px)' }}
+        >
             {/* Main Content Area */}
             <div className="flex-1 flex flex-col lg:flex-row px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 gap-8 sm:gap-12 lg:gap-16 xl:gap-24 items-start max-w-[1440px] mx-auto w-full py-6 sm:py-8 lg:py-12">
 

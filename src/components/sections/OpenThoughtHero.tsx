@@ -30,8 +30,11 @@ const OpenThoughtHero = () => {
         <div className="bg-[#F7F0F0] selection:bg-black selection:text-white relative overflow-hidden">
             {/* 1. Hero Content Section - Stays ABOVE the image */}
             <section
-                className="relative px-4 sm:px-6 md:px-8 lg:px-12 pt-[100px] sm:pt-[120px] lg:pt-[150px] pb-12 sm:pb-16 lg:pb-24 z-20 bg-[#F7F0F0]"
-                style={{ transform: `translateY(${heroTranslate}px)` }}
+                className="relative px-4 sm:px-6 md:px-8 lg:px-12 pb-12 sm:pb-16 lg:pb-24 z-20 bg-[#F7F0F0]"
+                style={{
+                    paddingTop: 'calc(var(--navbar-height, 100px) + 20px)',
+                    transform: `translateY(${heroTranslate}px)`
+                }}
             >
                 <div className="max-w-[1440px] mx-auto">
                     <div className="max-w-4xl">

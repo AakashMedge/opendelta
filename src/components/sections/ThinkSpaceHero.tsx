@@ -26,7 +26,10 @@ const ThinkSpaceHero = () => {
     return (
         <div className="bg-[#E9F2F7] selection:bg-black selection:text-white">
             {/* 1. Hero Content Section */}
-            <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 pt-[100px] sm:pt-[120px] lg:pt-[150px] pb-8 sm:pb-12 overflow-hidden z-10">
+            <section
+                className="relative px-4 sm:px-6 md:px-8 lg:px-12 pb-8 sm:pb-12 overflow-hidden z-10"
+                style={{ paddingTop: 'calc(var(--navbar-height, 100px) + 20px)' }}
+            >
                 <div
                     className="max-w-[1440px] mx-auto transition-transform duration-100 ease-out"
                     style={{ transform: `translateY(${scrollY * -heroScrollFactor}px)` }}

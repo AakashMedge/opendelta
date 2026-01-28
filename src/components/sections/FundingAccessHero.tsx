@@ -11,7 +11,10 @@ const FundingAccessHero = () => {
     }, []);
 
     return (
-        <section className="relative min-h-screen bg-[#F1F5EB] pt-[100px] sm:pt-[120px] lg:pt-[150px] pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
+        <section
+            className="relative min-h-screen bg-[#F1F5EB] pb-16 sm:pb-20 lg:pb-24 overflow-hidden"
+            style={{ paddingTop: 'calc(var(--navbar-height, 100px) + 20px)' }}
+        >
             <div className={`max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Small Label */}
                 <div className="text-[9px] sm:text-[10px] md:text-[11px] font-black tracking-[0.15em] sm:tracking-[0.2em] text-[#333] mb-8 sm:mb-10 lg:mb-12 uppercase">
