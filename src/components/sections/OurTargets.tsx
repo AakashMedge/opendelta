@@ -8,61 +8,61 @@ const targetAreas = [
         id: "city",
         num: "01",
         text: "CITY DEVELOPMENT: ADDRESSING MULTIFACETED PROBLEMS LEADING TO SOCIAL INEQUALITIES AND IMPROVING QUALITY OF LIFE THROUGH INNOVATION.",
-        image: "/focus-area.png"
+        image: "/focus-city.png"
     },
     {
         id: "port",
         num: "02",
         text: "PORT TRANSITION: ADAPTING TO UNCERTAINTIES LIKE CLIMATE CHANGE, SOCIAL RESPONSIBILITY, AND EMERGING DIGITIZATION TECHNOLOGIES.",
-        image: "/focus-area.png"
+        image: "/focus-port.png"
     },
     {
         id: "method",
         num: "03",
         text: "INTERDISCIPLINARY METHODOLOGY: DEVELOPING METHODS FOR INTEGRATING KNOWLEDGE FROM VARIOUS DISCIPLINES AND NON-ACADEMIC PARTNERS.",
-        image: "/focus-area.png"
+        image: "/focus-method.png"
     },
     {
         id: "climate",
         num: "04",
         text: "CLIMATE RESILIENCE: DESIGNING SOLUTIONS FOR RISING SEA LEVELS AND OTHER CLIMATE-RELATED CHALLENGES IN DELTA REGIONS.",
-        image: "/focus-area.png"
+        image: "/focus-climate.png"
     },
     {
         id: "social",
         num: "05",
         text: "SOCIAL INNOVATION: FOSTERING SOCIAL ENTERPRISES AND IMPACT-DRIVEN INITIATIVES TO ADDRESS SOCIETAL NEEDS.",
-        image: "/focus-area.png"
+        image: "/focus-social.png"
     },
     {
         id: "tech",
         num: "06",
         text: "TECHNOLOGY AND DIGITAL SKILLS: PROMOTING DIGITAL LITERACY AND TECHNOLOGIAL ADOPTION TO BRIDGE THE INNOVATION GAP",
-        image: "/focus-area.png"
+        image: "/focus-tech.png"
     },
     {
         id: "rd",
         num: "07",
         text: "RESEARCH AND DEVELOPMENT: INCREASING INVESTMENT IN R&D, PARTICULARLY IN EMERGING DEEPTECH FIELDS",
-        image: "/focus-area.png"
+        image: "/focus-rd.png"
     },
     {
         id: "ip",
         num: "08",
         text: "INTELLECTUAL PROPERTY: STRENGTHENING THE IP FRAMEWORK TO PROTECT AND COMMERCIALIZE INNOVATIONS.",
-        image: "/focus-area.png"
+        image: "/focus-ip.png"
     },
     {
         id: "sustainable",
         num: "09",
         text: "SUSTAINABLE DEVELOPMENT: FOCUSING ON CLEAN ENERGY, AGRICULTURE, AND ENVIRONMENTAL CONSERVATION INITIATIVES.",
-        image: "/focus-area.png"
+        image: "/focus-sustainable.png"
     },
     {
         id: "delta",
         num: "10",
         text: "DELTA SYSTEM: ANALYZING TRENDS, SHOCKS, STRESSES, AND INTERVENTIONS IN URBAN DELTA SYSTEMS AND THEIR INTERRELATIONS.",
-        image: "/focus-area.png"
+        image: "/focus-delta.png"
     }
 ];
 
@@ -137,7 +137,7 @@ const OurTargets = () => {
                             </div>
 
                             {/* Spinning Plus/Minus Icon */}
-                            <div className="hidden md:flex flex-shrink-0 ml-8 items-center justify-center w-12 h-12 rounded-full border border-black/5 group-hover:border-black/20 transition-all duration-500">
+                            <div className="hidden md:flex shrink-0 ml-8 items-center justify-center w-12 h-12 rounded-full border border-black/5 group-hover:border-black/20 transition-all duration-500">
                                 <div className="relative w-4 h-4">
                                     <div className={`absolute top-1/2 left-0 w-full h-[2px] bg-black transition-transform duration-500 ${activeId === area.id ? 'rotate-180' : ''}`} />
                                     <div className={`absolute left-1/2 top-0 h-full w-[2px] bg-black transition-transform duration-500 ${activeId === area.id ? 'rotate-90 scale-0' : 'rotate-0'}`} />

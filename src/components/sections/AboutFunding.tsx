@@ -14,10 +14,11 @@ const AboutFunding = () => {
             { threshold: 0.1 }
         );
 
-        if (sectionRef.current) observer.observe(sectionRef.current);
+        const currentSection = sectionRef.current;
+        if (currentSection) observer.observe(currentSection);
 
         return () => {
-            if (sectionRef.current) observer.unobserve(sectionRef.current);
+            if (currentSection) observer.unobserve(currentSection);
         };
     }, []);
 
@@ -39,7 +40,7 @@ const AboutFunding = () => {
             isBold: false
         },
         {
-            text: "By combining the benefits of government and corporate funding with industry expertise, Open Delta is creating a powerful ecosystem for driving sustainable social change. This approach not only maximizes the impact of individual initiatives but also paves the way for a more collaborative and effective approach to addressing society's most pressing challenges.",
+            text: "By combining the benefits of government and corporate funding with industry expertise, Open Delta is creating a powerful ecosystem for driving sustainable social change. This approach not only maximizes the impact of individual initiatives but also paves the way for a more collaborative and effective approach to addressing society&apos;s most pressing challenges.",
             isBold: false
         }
     ];

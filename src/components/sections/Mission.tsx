@@ -17,7 +17,7 @@ const Mission = () => {
                 {/* Right: Detailed Text */}
                 <div className="flex-1 space-y-8 text-[16px] md:text-[18px] lg:text-[19px] leading-relaxed text-[#444] font-medium">
                     <p>
-                        At <strong>Open Delta</strong>, we're <strong>pioneering</strong> a revolutionary <strong>approach</strong> that turns <strong>grassroots challenges</strong> into <strong>launchpads for innovation</strong>.
+                        At <strong><span className="text-[#FF8C00]">Open</span> Delta</strong>, we're <strong>pioneering</strong> a revolutionary <strong>approach</strong> that turns <strong>grassroots challenges</strong> into <strong>launchpads for innovation</strong>.
                     </p>
 
                     <p>

@@ -1,35 +1,62 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const GetInTouchTicker = () => {
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [isPaused, setIsPaused] = useState(false);
+
+    useEffect(() => {
+        const scroller = scrollRef.current;
+        if (!scroller) return;
+
+        let animationFrameId: number;
+        let scrollPos = scroller.scrollLeft;
+        const speed = 1.2; // Smooth constant speed consistent with other sections
+
+        const step = () => {
+            if (!isPaused) {
+                scrollPos += speed;
+
+                // Seamless loop logic
+                const setWidth = scroller.scrollWidth / 3;
+                if (scrollPos >= setWidth * 2) {
+                    scrollPos = setWidth;
+                }
+
+                scroller.scrollLeft = scrollPos;
+            } else {
+                scrollPos = scroller.scrollLeft;
+            }
+            animationFrameId = requestAnimationFrame(step);
+        };
+
+        animationFrameId = requestAnimationFrame(step);
+        return () => cancelAnimationFrame(animationFrameId);
+    }, [isPaused]);
+
     return (
         <section className="bg-white py-24 overflow-hidden border-t border-black/5 w-full">
             <div className="w-full">
                 {/* Scrolling Text Wrapper */}
-                <div className="relative flex overflow-hidden select-none mb-24">
+                <Link
+                    href="/funding-access"
+                    className="relative flex overflow-hidden select-none mb-24 cursor-pointer group"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
                     <div
-                        className="flex whitespace-nowrap min-w-full items-center"
-                        style={{ animation: 'marquee 30s linear infinite' }}
+                        ref={scrollRef}
+                        className="flex whitespace-nowrap min-w-full items-center overflow-x-hidden"
                     >
-                        {[...Array(6)].map((_, i) => (
-                            <span key={i} className="text-[15vw] font-medium text-[#1A1A1A] uppercase leading-none tracking-tighter mx-4 inline-block">
+                        {[...Array(9)].map((_, i) => (
+                            <span key={i} className="text-[80px] md:text-[140px] font-medium text-[#1A1A1A] uppercase leading-none tracking-tighter mx-8 inline-block transition-colors group-hover:text-black">
                                 GET IN TOUCH
                             </span>
                         ))}
                     </div>
-
-                    <div
-                        className="absolute top-0 flex whitespace-nowrap min-w-full items-center"
-                        style={{ animation: 'marquee2 30s linear infinite' }}
-                    >
-                        {[...Array(6)].map((_, i) => (
-                            <span key={i} className="text-[15vw] font-medium text-[#1A1A1A] uppercase leading-none tracking-tighter mx-4 inline-block">
-                                GET IN TOUCH
-                            </span>
-                        ))}
-                    </div>
-                </div>
+                </Link>
 
                 {/* Subtext Section */}
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 space-y-4">
@@ -37,7 +64,7 @@ const GetInTouchTicker = () => {
                         LET&apos;S TRANSFORM INDIA TOGETHER
                     </h3>
                     <p className="text-[18px] md:text-[24px] font-medium text-[#1A1A1A] uppercase tracking-wide">
-                        JOIN OPEN DELTA TODAY!
+                        JOIN <span className="text-[#FF8C00]">OPEN</span> DELTA TODAY!
                     </p>
                 </div>
             </div>

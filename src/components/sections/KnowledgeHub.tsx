@@ -2,25 +2,32 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const hubContent = [
     {
         num: "01",
         title: "Design Thinking",
         desc: "We champion collaborative creativity by applying design thinking to uncover deep insights and co-create impactful solutions for society.",
-        img: "/hero-2.png",
+        img: "/hub-design-thinking.png",
     },
     {
         num: "02",
         title: "Systems Innovation",
         desc: "Orchestrate systems innovation, uniting diverse changemakers to reimagine, connect, and transform entire ecosystems for sustainable social good.",
-        img: "/inception-1.png",
+        img: "/hub-systems-innovation.png",
     },
     {
         num: "03",
         title: "Agile Development",
         desc: "Rapid iteration and adaptive progress as we respond to evolving social challenges with real-world results.",
-        img: "/hero-3.png",
+        img: "/hub-agile-development.png",
+    },
+    {
+        num: "04",
+        title: "Contextual Matching",
+        desc: "We dynamically match societal challenges to solution architects based on expertise, ensuring the right minds tackle the right problems.",
+        img: "/knowledge_innovation.png",
     }
 ];
 
@@ -33,9 +40,19 @@ const KnowledgeHub = () => {
                     <span className="text-[10px] md:text-[12px] font-bold tracking-[0.2em] text-[#666] uppercase mb-4 block">
                         INFORMATION REPOSITORY
                     </span>
-                    <h2 className="text-[40px] md:text-[56px] lg:text-[64px] font-bold leading-none text-[#1A1A1A] tracking-tighter uppercase whitespace-nowrap">
-                        KNOWLEDGE <span className="text-[#D1D1D1]">HUB</span>
-                    </h2>
+                    <div className="flex flex-col md:flex-row md:items-end gap-6 justify-between w-full">
+                        <h2 className="text-[40px] md:text-[56px] lg:text-[64px] font-bold leading-none text-[#1A1A1A] tracking-tighter uppercase">
+                            KNOWLEDGE <span className="text-[#F90]">HUB</span>
+                        </h2>
+                        <Link href="/blog" className="group flex items-center gap-2 mb-1">
+                            <span className="text-[11px] font-black tracking-[0.2em] text-[#1A1A1A] uppercase">VIEW ALL INSIGHTS</span>
+                            <div className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center transition-all group-hover:bg-black group-hover:text-white">
+                                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="3">
+                                    <path d="M7 7l10 10M17 7v10H7" />
+                                </svg>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="flex-1 flex items-start gap-8 lg:mt-10">
@@ -56,17 +73,19 @@ const KnowledgeHub = () => {
                     >
                         {/* Premium Image Card */}
                         <div className="flex-1 w-full flex justify-center">
-                            <div className="relative w-full max-w-[550px] aspect-[4/5] md:aspect-square bg-white rounded-[40px] p-4 md:p-6 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] transition-transform duration-700 hover:scale-[1.02]">
-                                <div className="relative w-full h-full rounded-[30px] overflow-hidden">
-                                    <Image
-                                        src={item.img}
-                                        alt={item.title}
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                    />
+                            <Link href="/blog" className="w-full max-w-[550px] block">
+                                <div className="relative w-full aspect-[4/5] md:aspect-square bg-white rounded-[40px] p-4 md:p-6 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 hover:scale-[1.02] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] group/img">
+                                    <div className="relative w-full h-full rounded-[30px] overflow-hidden">
+                                        <Image
+                                            src={item.img}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover/img:scale-110"
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
 
                         {/* Text Content */}
@@ -76,29 +95,33 @@ const KnowledgeHub = () => {
                                 <div className="h-[1px] w-12 bg-[#D1D1D1]" />
                             </div>
 
-                            <h3 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[#1A1A1A] leading-tight tracking-tight">
-                                {item.title}
-                            </h3>
+                            <Link href="/blog" className="block group/title">
+                                <h3 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-[#1A1A1A] leading-tight tracking-tight transition-colors group-hover/title:text-[#F90]">
+                                    {item.title}
+                                </h3>
+                            </Link>
 
                             <p className="text-[16px] md:text-[18px] lg:text-[20px] text-[#666] leading-relaxed max-w-md">
                                 {item.desc}
                             </p>
 
-                            <button className="flex items-center gap-3 group">
-                                <span className="text-[12px] font-black uppercase tracking-[0.2em] text-[#1A1A1A]">
-                                    Discover More
-                                </span>
-                                <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:border-black">
-                                    <svg
-                                        className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:text-white"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <Link href="/blog">
+                                <button className="flex items-center gap-3 group px-0 border-none bg-transparent cursor-pointer">
+                                    <span className="text-[12px] font-black uppercase tracking-[0.2em] text-[#1A1A1A]">
+                                        Discover More
+                                    </span>
+                                    <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:border-black group-hover:text-white">
+                                        <svg
+                                            className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 ))}

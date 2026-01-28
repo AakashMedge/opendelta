@@ -15,8 +15,8 @@ const KnowledgeHeader = () => {
                     GOOD THINGS TAKE TIME
                 </h2>
 
-                <p className="text-[14px] md:text-[16px] text-[#666] mb-20">
-                    Connect with us at email here
+                <p className="text-[14px] md:text-[16px] text-[#666] mb-20 text-center">
+                    Connect with us
                 </p>
 
                 <div className="max-w-4xl mx-auto text-left space-y-8 mb-24">

@@ -7,6 +7,7 @@ import OurTargets from "@/components/sections/OurTargets";
 import KnowledgeHub from "@/components/sections/KnowledgeHub";
 import Dismantling from "@/components/sections/Dismantling";
 import Ecosystem from "@/components/sections/Ecosystem";
+import HomeFooter from "@/components/sections/HomeFooter";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <KnowledgeHub />
       <Dismantling />
       <Ecosystem />
+      <HomeFooter />
     </>
   );
 }

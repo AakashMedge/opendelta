@@ -4,28 +4,28 @@ import Image from 'next/image';
 const cards = [
     {
         title: "Obstacle Navigation",
-        desc: "Issue identifying and prioritizing the most pressing problems that align with resources, and potential impact.",
-        img: "/inception-1.png"
+        desc: "Issue identifying and prioritizing the most pressing problems that align with resources, and potential impact, while considering the dynamic nature of social challenges and the need for sustainable, long-term solutions",
+        img: "/inception-obstacle-navigation.png"
     },
     {
-        title: "Intellectual Capital",
-        desc: "Tapping into legacy knowledge and modern innovation systems to solve complex social equations.",
-        img: "/inception-2.png"
+        title: "Profitability Contraints",
+        desc: "The dilemma of pursuing a social mission and achieving financial sustainability, as profitability constraints can limit the ability to address critical societal issues that may not generate immediate revenue",
+        img: "/inception-profitability-constraints.png"
     },
     {
-        title: "Strategic Alignment",
-        desc: "Ensuring every initiative perfectly mirrors our core mission and long-term vision for change.",
-        img: "/inception-1.png"
+        title: "Solution Absence",
+        desc: "Failure to accurately identify and prioritize the most pressing societal issues, leading to misaligned efforts and ineffective interventions that do not address the root causes of problems",
+        img: "/inception-solution-absence.png"
     },
     {
-        title: "Scalable Impact",
-        desc: "Designing solutions that can grow naturally across borders and different societal segments.",
-        img: "/inception-2.png"
+        title: "Funding Gap",
+        desc: "A significant funding gap, particularly in indirect costs and organizational development, which can hinder their ability to scale impact",
+        img: "/inception-funding-gap.png"
     },
     {
         title: "Sustainability",
-        desc: "Issues that align with the core mission, have long-term relevance, and can generate lasting impact through interventions that empower communities.",
-        img: "/inception-1.png"
+        desc: "Issues that align with the core mission, have long-term relevance, and can generate lasting impact through interventions that empower communities and foster systemic change",
+        img: "/inception-sustainability.png"
     }
 ];
 
@@ -39,13 +39,13 @@ const Inception = () => {
                         THE INCEPTION
                     </span>
                     <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-medium leading-[1.1] text-[#1A1A1A] tracking-tight max-w-xl uppercase">
-                        WHAT CATALYZED THE FORMATION OF OUR MOVEMENT?
+                        WHAT CATALYZED THE FORMATION OF OUR ERA?
                     </h2>
                 </div>
 
                 <div className="flex-1 flex flex-col justify-end">
                     <p className="text-[16px] md:text-[18px] lg:text-[19px] leading-relaxed text-[#444] font-medium">
-                        <strong>Open Delta</strong> emerged from a critical realization: Traditional <strong>venture capital
+                        <strong><span className="text-[#FF8C00]">Open</span> Delta</strong> emerged from a critical realization: Traditional <strong>venture capital
                             mathematics</strong> often <strong>sidelined</strong> crucial <strong>grassroots challenges</strong> due to
                         <strong>profitability constraints</strong>. However, we've revolutionized this approach by assembling
                         <strong>a team of futurists</strong> who bring a <strong>fresh perspective</strong> to social innovation.

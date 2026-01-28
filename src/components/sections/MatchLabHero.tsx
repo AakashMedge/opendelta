@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
+import Link from 'next/link';
+
 const MatchLabHero = () => {
     const [scrollY, setScrollY] = useState(0);
 
@@ -71,15 +73,19 @@ const MatchLabHero = () => {
                 }}
             >
                 <div className="max-w-4xl">
-                    <div className="relative w-full aspect-square md:aspect-video lg:aspect-square overflow-hidden bg-white shadow-sm">
-                        <Image
-                            src="/matchlab-hands.png"
-                            alt="Dynamic Matching Illustration"
-                            fill
-                            className="object-contain p-4 md:p-8"
-                            priority
-                        />
-                    </div>
+                    <Link href="/private-office" className="block group/hero">
+                        <div className="relative w-full aspect-square md:aspect-video lg:aspect-square overflow-hidden bg-white shadow-sm transition-all duration-700 group-hover/hero:shadow-2xl group-hover/hero:scale-[1.01]">
+                            <Image
+                                src="/matchlab-hands.png"
+                                alt="Dynamic Matching Illustration"
+                                fill
+                                className="object-contain p-4 md:p-8 transition-transform duration-1000 group-hover/hero:scale-105"
+                                priority
+                            />
+                            {/* Hover Overlay */}
+                            <div className="absolute inset-0 bg-black/0 group-hover/hero:bg-black/5 transition-colors duration-500" />
+                        </div>
+                    </Link>
 
                     {/* Bottom Prompt Bar */}
                     <div className="mt-6 flex justify-between items-end border-b border-black/5 pb-4">
@@ -105,14 +111,29 @@ const MatchLabHero = () => {
     );
 };
 
-const SocialIcon = ({ type }: { type: 'instagram' | 'twitter' }) => (
-    <div className="w-10 h-10 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-pointer">
-        {type === 'instagram' ? (
-            <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        ) : (
-            <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none" strokeWidth="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-        )}
-    </div>
-);
+const SocialIcon = ({ type }: { type: 'instagram' | 'twitter' }) => {
+    const instagramUrl = "https://www.instagram.com/open_deltaco?igsh=b3Y2NXRhcjdudTY%3D&utm_source=qr";
+
+    return (
+        <a
+            href={type === 'instagram' ? instagramUrl : "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 cursor-pointer group"
+        >
+            {type === 'instagram' ? (
+                <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none transition-transform group-hover:scale-110" strokeWidth="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            ) : (
+                <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none transition-transform group-hover:scale-110" strokeWidth="2">
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+            )}
+        </a>
+    );
+};
 
 export default MatchLabHero;

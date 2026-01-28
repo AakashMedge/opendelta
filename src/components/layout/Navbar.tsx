@@ -11,7 +11,10 @@ const menuItems = [
     { name: 'FUNDING ACCESS', href: '/funding-access' },
     { name: 'MATCHLAB', href: '/matchlab' },
     { name: 'KNOWLEDGE', href: '/knowledge' },
+    { name: 'BLOG', href: '/blog' },
 ];
+
+import Logo from "@/components/common/Logo";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,25 +29,10 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const Logo = ({ isWhite = false }: { isWhite?: boolean }) => (
-        <div className="flex items-center gap-2 font-black tracking-tighter text-2xl group cursor-pointer">
-            <div className="relative w-8 h-8 transition-transform duration-500 group-hover:rotate-180">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                    <path d="M50 10 L90 90 L10 90 Z" fill={isWhite ? "white" : "#1A1A1A"} />
-                    <path d="M55 40 L85 90 L25 90 Z" fill="#F90" />
-                </svg>
-            </div>
-            <div className={`flex flex-col leading-none transition-colors duration-300 ${isWhite ? "text-white" : "text-black"}`}>
-                <span className="text-[#F90]">OPEN</span>
-                <span>DELTA</span>
-            </div>
-        </div>
-    );
-
     return (
         <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled
-            ? 'py-4 bg-white/90 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]'
-            : 'py-8 bg-[#F3F3F3]'
+            ? 'py-4 bg-[#F5F5F5] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]'
+            : 'py-8 bg-[#F5F5F5]'
             }`}>
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center">
                 {/* Logo */}
@@ -121,8 +109,9 @@ const Navbar = () => {
                                     ${idx === 1 ? 'w-[240px]' : ''}
                                     ${idx === 2 ? 'w-[280px]' : ''}
                                     ${idx === 3 ? 'w-[300px]' : ''}
-                                    ${idx === 4 ? 'w-[260px]' : ''}
-                                    ${idx === 5 ? 'w-[220px]' : ''}
+                                    ${idx === 4 ? 'w-[320px]' : ''}
+                                    ${idx === 5 ? 'w-[280px]' : ''}
+                                    ${idx === 6 ? 'w-[220px]' : ''}
                                 `}
                             >
                                 {item.name}
@@ -132,9 +121,16 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex justify-between items-center text-white/40 text-[10px] font-black tracking-[0.2em] border-t border-white/5 pt-8">
-                        <span>OPEN DELTA 2026</span>
+                        <span>OPEN DELTA @2026</span>
                         <div className="flex gap-4">
-                            <span className="hover:text-white transition-colors cursor-pointer">INS</span>
+                            <a
+                                href="https://www.instagram.com/open_deltaco?igsh=b3Y2NXRhcjdudTY%3D&utm_source=qr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-white transition-colors cursor-pointer"
+                            >
+                                INS
+                            </a>
                             <span className="hover:text-white transition-colors cursor-pointer">TWT</span>
                         </div>
                     </div>
