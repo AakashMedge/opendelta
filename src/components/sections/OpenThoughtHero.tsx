@@ -38,7 +38,7 @@ const OpenThoughtHero = () => {
                         <div className="text-[10px] md:text-[12px] font-black tracking-[0.2em] text-[#333] mb-8 uppercase">
                             OPEN THOUGHT PROJECT
                         </div>
-                        <h1 className="text-[48px] md:text-[72px] lg:text-[88px] font-medium leading-none tracking-tight text-[#1A1A1A] mb-12 uppercase">
+                        <h1 className="text-[32px] md:text-[48px] lg:text-[56px] font-medium leading-none tracking-tight text-[#1A1A1A] mb-12 uppercase">
                             A NEW ERA OF<br />
                             COLLECTIVE<br />
                             PROBLEM-SOLVING
@@ -46,7 +46,7 @@ const OpenThoughtHero = () => {
 
                         <div className="max-w-2xl">
                             <p className="text-[16px] md:text-[18px] lg:text-[20px] leading-[1.6] text-[#333] font-medium">
-                                Envision a digital crucible where India's most pressing societal issues are brought to light, examined, and primed for solution. This is the essence of the Open Thought Experiment. Here, the nation's academic elite stand shoulder to shoulder with passionate citizens, each contributing their unique perspective on the challenges facing India. Through a simple registration process, this platform becomes a launchpad for transformative ideas, turning individual concerns into collective action.
+                                Envision a digital crucible where India&apos;s most pressing societal issues are brought to light, examined, and primed for solution. This is the essence of the Open Thought Experiment. Here, the nation&apos;s academic elite stand shoulder to shoulder with passionate citizens, each contributing their unique perspective on the challenges facing India. Through a simple registration process, this platform becomes a launchpad for transformative ideas, turning individual concerns into collective action.
                             </p>
                         </div>
                     </div>

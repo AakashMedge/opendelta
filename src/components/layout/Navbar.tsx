@@ -31,8 +31,8 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${scrolled
-            ? 'py-4 bg-[#F5F5F5] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]'
-            : 'py-8 bg-[#F5F5F5]'
+            ? 'py-2 bg-[#F5F5F5] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]'
+            : 'py-4 bg-[#F5F5F5]'
             }`}>
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center">
                 {/* Logo */}
@@ -41,12 +41,12 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu - Premium Minimalist */}
-                <div className="hidden lg:flex items-center gap-4">
+                <div className="hidden lg:flex items-center gap-[0.5vw]">
                     {menuItems.map((item, idx) => (
                         <Link
                             key={item.name}
                             href={item.href}
-                            className={`px-5 py-2.5 text-[11px] font-black tracking-[0.2em] transition-all duration-300 rounded-full border ${pathname === item.href
+                            className={`whitespace-nowrap px-[1.2vw] py-[0.8vh] text-[0.75vw] lg:text-[0.65vw] xl:text-[0.6vw] font-medium tracking-tighter transition-all duration-300 rounded-full border ${pathname === item.href
                                 ? 'bg-black text-white border-transparent'
                                 : idx === menuItems.length - 1
                                     ? 'bg-black/5 text-black border-black/10 hover:bg-black/10'
@@ -63,7 +63,7 @@ const Navbar = () => {
                     className="lg:hidden flex items-center gap-3 cursor-pointer group"
                     onClick={() => setIsOpen(true)}
                 >
-                    <span className="text-[10px] font-black tracking-[0.3em] text-[#111]">MENU</span>
+                    <span className="text-[10px] font-medium tracking-tight text-[#111]">MENU</span>
                     <div className="flex flex-col gap-1.5 overflow-hidden">
                         <div className="w-6 h-[2.5px] bg-black transition-transform group-hover:translate-x-1"></div>
                         <div className="w-6 h-[2.5px] bg-black"></div>
@@ -78,7 +78,7 @@ const Navbar = () => {
                     }`}
             >
                 {/* Background Pattern */}
-                <div className="absolute top-0 right-0 text-[30vw] font-black text-white/[0.03] select-none pointer-events-none uppercase leading-none tracking-tighter">
+                <div className="absolute top-0 right-0 text-[30vw] font-medium text-white/[0.03] select-none pointer-events-none uppercase leading-none tracking-tighter">
                     DELTA
                 </div>
 
@@ -103,9 +103,9 @@ const Navbar = () => {
                                 href={item.href}
                                 onClick={() => setIsOpen(false)}
                                 className={`
-                                    relative py-4 px-12 rounded-full font-black text-center transition-all duration-500 hover:scale-110 group/item
+                                    relative py-4 px-12 rounded-full font-medium text-center transition-all duration-500 hover:scale-110 group/item
                                     ${pathname === item.href ? 'bg-white text-black scale-105' : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'}
-                                    ${idx === 0 ? 'w-[180px] text-sm' : 'text-xs tracking-[0.3em]'}
+                                    ${idx === 0 ? 'w-[180px] text-sm' : 'text-xs tracking-tight'}
                                     ${idx === 1 ? 'w-[240px]' : ''}
                                     ${idx === 2 ? 'w-[280px]' : ''}
                                     ${idx === 3 ? 'w-[300px]' : ''}
@@ -120,7 +120,7 @@ const Navbar = () => {
                         ))}
                     </div>
 
-                    <div className="flex justify-between items-center text-white/40 text-[10px] font-black tracking-[0.2em] border-t border-white/5 pt-8">
+                    <div className="flex justify-between items-center text-white/40 text-[10px] font-medium tracking-[0.2em] border-t border-white/5 pt-8">
                         <span>OPEN DELTA @2026</span>
                         <div className="flex gap-4">
                             <a

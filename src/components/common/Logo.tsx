@@ -8,8 +8,8 @@ const Logo = ({ isWhite = false, className = "" }: { isWhite?: boolean, classNam
         <Image
             src="/logo.png"
             alt="Open Delta Logo"
-            width={180}
-            height={72}
+            width={120}
+            height={48}
             className={`object-contain transition-transform duration-500 group-hover:scale-105 ${isWhite ? 'brightness-0 invert' : 'mix-blend-multiply brightness-[1.05] contrast-[1.1]'}`}
             priority
         />

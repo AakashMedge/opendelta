@@ -35,31 +35,34 @@ const KnowledgeHub = () => {
     return (
         <section className="bg-white py-20 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
             {/* Header Section */}
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-start mb-24 lg:mb-32">
-                <div className="flex-1">
-                    <span className="text-[10px] md:text-[12px] font-bold tracking-[0.2em] text-[#666] uppercase mb-4 block">
+            <div className="mb-24 lg:mb-32 border-b border-[#E5E5E5] pb-8">
+                {/* 1. Label - Above */}
+                <div className="mb-2">
+                    <span className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-[#666] uppercase whitespace-nowrap">
                         INFORMATION REPOSITORY
                     </span>
-                    <div className="flex flex-col md:flex-row md:items-end gap-6 justify-between w-full">
-                        <h2 className="text-[40px] md:text-[56px] lg:text-[64px] font-bold leading-none text-[#1A1A1A] tracking-tighter uppercase">
-                            KNOWLEDGE <span className="text-[#F90]">HUB</span>
-                        </h2>
-                        <Link href="/blog" className="group flex items-center gap-2 mb-1">
-                            <span className="text-[11px] font-black tracking-[0.2em] text-[#1A1A1A] uppercase">VIEW ALL INSIGHTS</span>
-                            <div className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center transition-all group-hover:bg-black group-hover:text-white">
-                                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="3">
-                                    <path d="M7 7l10 10M17 7v10H7" />
-                                </svg>
-                            </div>
-                        </Link>
-                    </div>
                 </div>
 
-                <div className="flex-1 flex items-start gap-8 lg:mt-10">
-                    <div className="w-[1px] h-16 bg-black shrink-0 hidden md:block" />
-                    <p className="text-[16px] md:text-[18px] lg:text-[19px] leading-relaxed text-[#1A1A1A] font-medium max-w-lg">
-                        We orchestrate a multifaceted approach to address <strong>India&apos;s grassroots challenges</strong>.
-                        Modern sourcing methods to identify <strong>critical problems</strong>.
+                {/* Horizontal Row for Heading, Link, Description */}
+                <div className="flex flex-col lg:flex-row items-end justify-between gap-6 lg:gap-12">
+                    {/* 2. Heading */}
+                    <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-bold leading-none text-[#1A1A1A] tracking-tighter uppercase whitespace-nowrap">
+                        KNOWLEDGE <span className="text-[#F90]">HUB</span>
+                    </h2>
+
+                    {/* 3. Link */}
+                    <Link href="/blog" className="group flex items-center gap-3 mb-2 whitespace-nowrap">
+                        <span className="text-[10px] font-black tracking-[0.2em] text-[#1A1A1A] uppercase transition-colors group-hover:text-[#F90]">VIEW ALL INSIGHTS</span>
+                        <div className="w-6 h-6 rounded-full border border-black/10 flex items-center justify-center transition-all group-hover:bg-[#F90] group-hover:border-[#F90] group-hover:text-white">
+                            <svg viewBox="0 0 24 24" className="w-3 h-3 fill-none stroke-current" strokeWidth="2.5">
+                                <path d="M7 7l10 10M17 7v10H7" />
+                            </svg>
+                        </div>
+                    </Link>
+
+                    {/* 4. Description */}
+                    <p className="text-[14px] leading-relaxed text-[#444] font-medium max-w-[300px] text-right lg:text-left hidden xl:block mb-1">
+                        We orchestrate a multifaceted approach to address India&apos;s grassroots challenges. Modern sourcing methods to identify critical problems.
                     </p>
                 </div>
             </div>

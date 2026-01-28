@@ -20,7 +20,7 @@ const FundingAccessHero = () => {
 
                 {/* Content Section */}
                 <div className="max-w-4xl">
-                    <h1 className="text-[32px] md:text-[42px] lg:text-[48px] font-bold leading-none tracking-tight text-[#1A1A1A] mb-12 uppercase">
+                    <h1 className="text-[32px] md:text-[48px] lg:text-[56px] font-medium leading-none tracking-tight text-[#1A1A1A] mb-12 uppercase">
                         DIVERSE FUNDING DRIVING SOCIAL CHANGE
                     </h1>
 

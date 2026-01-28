@@ -35,17 +35,17 @@ const ThinkSpaceHero = () => {
                         <div className="text-[10px] md:text-[12px] font-black tracking-[0.3em] text-[#333] mb-6 uppercase">
                             THINKSPACE
                         </div>
-                        <h1 className="text-[42px] md:text-[64px] lg:text-[84px] font-medium leading-[1.05] tracking-tight text-[#1A1A1A] mb-12">
+                        <h1 className="text-[32px] md:text-[48px] lg:text-[56px] font-medium leading-[1.05] tracking-tight text-[#1A1A1A] mb-12">
                             THE LOST ART OF<br />
                             COMMUNAL THINKING
                         </h1>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                             <p className="text-[15px] md:text-[17px] lg:text-[18px] leading-[1.6] text-[#444] font-medium">
-                                Imagine a modern-day phenomenon, where the spirit of Socratic dialogue meets 21st-century innovation. This is Think Space – a concept that resurrects the lost art of communal thinking in today's digitally saturated world.
+                                Imagine a modern-day phenomenon, where the spirit of Socratic dialogue meets 21st-century innovation. This is Think Space – a concept that resurrects the lost art of communal thinking in today&apos;s digitally saturated world.
                             </p>
                             <p className="text-[15px] md:text-[17px] lg:text-[18px] leading-[1.6] text-[#444] font-medium">
-                                These physical and virtual forums provide a safe harbor for India's brightest minds to assemble, deliberate, and ideate on critical societal issues. Think Space is more than just a location; it's a catalyst for transformative ideas, where the collective intelligence of participants is harnessed to address the complex challenges facing our nation.
+                                These physical and virtual forums provide a safe harbor for India&apos;s brightest minds to assemble, deliberate, and ideate on critical societal issues. Think Space is more than just a location; it&apos;s a catalyst for transformative ideas, where the collective intelligence of participants is harnessed to address the complex challenges facing our nation.
                             </p>
                         </div>
                     </div>

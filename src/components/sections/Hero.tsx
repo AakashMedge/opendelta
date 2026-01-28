@@ -1,17 +1,18 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex flex-col bg-white pt-[120px] lg:pt-[160px]">
+        <section className="relative min-h-screen flex flex-col bg-white pt-[100px] lg:pt-[140px]">
             {/* Main Content Area */}
             <div className="flex-1 flex flex-col lg:flex-row px-6 md:px-12 lg:px-20 gap-16 lg:gap-32 items-start max-w-[1440px] mx-auto w-full">
 
                 {/* Left Content */}
                 <div className="flex-1 flex flex-col">
-                    <h1 className="text-[40px] md:text-[56px] lg:text-[72px] font-medium leading-[1.05] tracking-tight text-[#1A1A1A] mb-12 uppercase">
+                    <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-medium leading-[1.05] tracking-tight text-[#1A1A1A] mb-12 uppercase">
                         TAPPING INDIA&apos;S<br />
                         INTELLECTUAL<br />
                         CAPITAL SURPLUS
@@ -43,9 +44,9 @@ const Hero = () => {
                     </div>
 
                     <div className="mt-12">
-                        <button className="px-10 py-3.5 bg-[#1A1A1A] text-white text-[12px] font-bold rounded-full tracking-widest hover:bg-black/80 transition-all uppercase">
+                        <Link href="/open-thought-prj" className="inline-block px-10 py-3.5 bg-[#1A1A1A] text-white text-[12px] font-bold rounded-full tracking-widest hover:bg-black/80 transition-all uppercase">
                             JOIN US
-                        </button>
+                        </Link>
                     </div>
                 </div>
 

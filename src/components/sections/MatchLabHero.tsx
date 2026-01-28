@@ -38,7 +38,7 @@ const MatchLabHero = () => {
                         <div className="text-[10px] md:text-[12px] font-black tracking-[0.2em] text-[#333] mb-8 uppercase">
                             DYNAMIC MATCHING
                         </div>
-                        <h1 className="text-[48px] md:text-[72px] lg:text-[88px] font-medium leading-none tracking-tight text-[#1A1A1A] mb-12 uppercase">
+                        <h1 className="text-[32px] md:text-[48px] lg:text-[56px] font-medium leading-none tracking-tight text-[#1A1A1A] mb-12 uppercase">
                             ONE SOCIETAL PROBLEM<br />
                             AT A TIME
                         </h1>

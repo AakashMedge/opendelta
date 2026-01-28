@@ -27,7 +27,7 @@ const BlogHero = () => {
                         </div>
 
                         {/* Heading */}
-                        <h1 className="text-[56px] md:text-[88px] lg:text-[110px] font-medium leading-[0.9] tracking-tighter text-[#1A1A1A] mb-12 uppercase italic">
+                        <h1 className="text-[36px] md:text-[48px] lg:text-[56px] font-medium leading-[0.9] tracking-tighter text-[#1A1A1A] mb-12 uppercase italic">
                             REWRITING<br />
                             <span className="text-[#F90]">POSSIBILITIES.</span>
                         </h1>

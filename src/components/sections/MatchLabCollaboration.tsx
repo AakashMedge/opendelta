@@ -40,7 +40,7 @@ const MatchLabCollaboration = () => {
         <section id="collaborate" className="bg-[#F3F3F3] pt-12 pb-12 overflow-hidden border-t border-black/5">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                 <div className="mb-32">
-                    <h2 className="text-[32px] md:text-[42px] font-medium text-[#1A1A1A] mb-4 uppercase">
+                    <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-medium text-[#1A1A1A] mb-4 uppercase">
                         LET&apos;S COLLABORATE
                     </h2>
                     <p className="text-[14px] md:text-[16px] text-[#666] mb-12">

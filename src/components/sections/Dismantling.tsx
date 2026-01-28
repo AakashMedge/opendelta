@@ -6,7 +6,7 @@ const Dismantling = () => {
             <div className="max-w-4xl mx-auto space-y-12">
                 {/* Main Heading */}
                 <div className="space-y-6">
-                    <h2 className="text-[36px] md:text-[52px] lg:text-[64px] font-bold leading-[1.1] text-[#1A1A1A] uppercase tracking-tight">
+                    <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-bold leading-[1.1] text-[#1A1A1A] uppercase tracking-tight">
                         DISMANTLING CONVENTIONAL THINKING
                     </h2>
                     <p className="text-[16px] md:text-[18px] lg:text-[20px] text-[#444] font-medium leading-relaxed">
